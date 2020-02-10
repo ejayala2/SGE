@@ -1,0 +1,35 @@
+<div class="card">
+	<div class="card-body">
+		<form #beaconForm="ngForm" (ngSubmit)="onSubmit(beaconForm)">
+			<input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="beaconService.selectedBeacon.$key">
+			<div class="form-group">
+				<input 
+				type="text"
+				class="form-control"
+				name="name"
+				#name="ngModel"
+				[(ngModel)]="beaconService.selectedBeacon.name"
+				placeholder="Add Beacon Name"
+				>
+			</div>
+			<div class="form-group">
+				<input 
+				type="text"
+				class="form-control"
+				name="uuid"
+				#uuid="ngModel"
+				[(ngModel)]="beaconService.selectedBeacon.uuid"
+				placeholder="Add Beacon uuid"
+				>
+			</div>
+			<div class="form-group text-center">
+				<button id="buttons" class="btn btn-primary" type="submit">
+					<i class="fas fa-plus-circle"> Registrar</i>
+				</button>
+				<button id="buttons" class="btn btn-secondary" type="reset" (click)="resetForm(beaconForm)">
+					<i class="fas fa-sync-alt"> Reset</i>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
