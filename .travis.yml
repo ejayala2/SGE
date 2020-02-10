@@ -1,16 +1,30 @@
-language: node_js
-node_js:
-  - "12.2.0"
-branches:
-  only:
-    - master
-before_script:
-  - npm install -g @angular/cli
-script:
-  - npm install
-  - npm run build
-deploy:
-  skip_cleanup: true
-  provider: firebase
-  token:
-    secure: "1//05cl8lwP0nYaaCgYIARAAGAUSNwF-L9IrylbnkFM9826jEOuWLyb6VDR0dDk2Hi93bgNJp5nHIicY_EEqXuTkxDZjozDKhcDtvs4"
+{
+  "language": "node_js",
+  "os": [
+    "windows"
+  ],
+  "node_js": [
+    "12.2.0"
+  ],
+  "branches": {
+    "only": [
+      "master"
+    ]
+  },
+  "before_script": [
+    "npm install -g @angular/cli"
+  ],
+  "script": [
+    "npm install",
+    "npm run build"
+  ],
+  "deploy": [
+    {
+      "provider": "firebase",
+      "skip_cleanup": true,
+      "token": {
+        "secure": "kR4LHdTy9/7JgiudwXNifUlaQnXmqFwtGfy5NjuhR/9/lJkgDqz1c8NsN7e+i6m2C98xYuLQLy/6uTzvkaKv+0yVo42JXpu7iNj0cjfJNy9reiWCGJ3IBP/Lg9tmqtiTjNnmQbFiUj63JLwtTrlhJwEY79dsO6aWvM9M3/LcIpR56qmvY5+LcPF2gdbvqq4mUMUlqwmuziYJVnL5EBQwr67D4yznwpPKSS/e3y4+bW5o7zICBgFDuSGn9hfLBvx/4SYRhQ4rzO5i6doDnvdcCjDcsLdLKkTmJqzlJMFIba8QmpQzJb2iyeyv69WdTNmTSwLEsNMicfcR0hiD0GF99zMBcBLDtx8E6vvhv1QBqvBq2s+l4JL5S8RdFN4BzcHs9/AggD/0/MtsLUpHr8gm4iFWPWyd/D5eppt+ow6zuP46IDHoUzJge25FPJFsziz5om2SCdkxjBJyg/HqShFPfw/I9YGW/B+8goEANl35ZzC9WKrRSlhKTHFNe4N2ViZbyWnfR/wOY+6DrU3pbbIXON2vQ5II+LmqfidHYCnv6jogfR6MgnKGmUdX+CdYgDggpS4YOLkAOfRoZrk6RJjGvPg2mmNhx6Hm9vzUMDw1OFut0i67dlECw5nwOAQyxRvZCbpVS1IzlWUQYpMRO0jqI69lhGrgI7O4ctBcpAti8UU="
+      }
+    }
+  ]
+}
