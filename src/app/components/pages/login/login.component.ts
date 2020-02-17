@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../../models/user';
 import { AuthService } from '../../../services/auth.service'
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authSvc: AuthService) { }
+  constructor(private authSvc: AuthService, private route: Router) { }
 
   loginForm = new FormGroup({
     email: new FormControl('', Validators.required),
@@ -21,7 +21,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onLogin(form: User){
-    this.authSvc.loginByEmail(form);
+    this.authSvc
+      .loginByEmail(form)
+      .then(res =>{
+        console.log('Succesfully', res);
+        this.route.navigate(['/']);
+      })
+      .catch(err => console.log('Error', err));
   }
 
 }

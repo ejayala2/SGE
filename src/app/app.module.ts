@@ -28,7 +28,11 @@ import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent, 
-    BeaconsComponent, BeaconListComponent, BeaconComponent, EventsComponent, ToolbarComponent,
+    BeaconsComponent, 
+    BeaconListComponent, 
+    BeaconComponent, 
+    EventsComponent, 
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,

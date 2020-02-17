@@ -1,11 +1,35 @@
 #nav{
-	background-color: #e3f2fd;
+	background-color: #009c8c;
 }
 #op{
 	font-size: 20px;
-	color: black;
-	
+	margin-left: 1em;
+	text-align: center;
+	color: white;
 }
-.navbar-brand{
+#titulo{
+	color: white;
+	font-weight: bold;
 	font-size: 30px;
+}
+#log{
+	margin-left: 1.5em;
+	background-color: #009c8c;
+	border-color: white;
+}
+#logout{
+	margin-left: 1.5em;
+	background-color: #df3c27;
+	border-color: white;
+}
+#buscar{
+	color: #fff;
+	border-color: white;
+}
+ul {
+  /* Change the link color on hover */
+  li a:hover {
+	background-color: #1bb3a6;
+	color: white;
+  }
 }
