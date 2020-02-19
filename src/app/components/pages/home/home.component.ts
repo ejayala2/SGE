@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToolbarComponent } from '../../toolbar/toolbar.component';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,12 @@ import { ToolbarComponent } from '../../toolbar/toolbar.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public appName = 'Sistema Gestor de Eventos';
+  constructor(public authSvc: AuthService) { }
 
   ngOnInit(): void {
   }
-
+  onLogout():void{
+    this.authSvc.logout();
+  }
 }
